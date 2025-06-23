@@ -10,7 +10,7 @@ pipeline{
         }
         stage("helm deploy"){
             steps{
-                sh 'helm upgrade --install springapp $WORKSPACE --namespace springapp'
+                sh 'helm upgrade --install springapp $WORKSPACE --namespace springapp --values $WORKSPACE/values-dev.yaml'
             }
         }
 
