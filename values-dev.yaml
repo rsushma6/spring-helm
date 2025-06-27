@@ -92,14 +92,14 @@ resources: {}
   #   memory: 700Mi
 
 # This is to setup the liveness and readiness probes more information can be found here: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/
-#livenessProbe:
-#  httpGet:
-#    path: /api/v1/employees
-#    port: http
-#readinessProbe:
-#  httpGet:
-#    path: /api/v1/employees
-#    port: http
+livenessProbe:
+  httpGet:
+    path: /api/v1/employees
+    port: http
+readinessProbe:
+  httpGet:
+    path: /api/v1/employees
+    port: http
 
 #This section is for setting up autoscaling more information can be found here: https://kubernetes.io/docs/concepts/workloads/autoscaling/
 autoscaling:
